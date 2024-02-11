@@ -2,6 +2,12 @@
 
 int main(int argc, char* argv[])
 {
+	#if defined(_WIN32)
+	std::cout << "Platform _WIN32" << std::endl;
+	#elif defined(__unix__)
+	std::cout << "Platform __unix__" << std::endl;
+	#endif
+
 	std::wstring steamInstallPath = gd::Steam::getSteamInstallPath();
 
 	std::wcout << L"[INFO] Got Steam install path: " << steamInstallPath << std::endl;

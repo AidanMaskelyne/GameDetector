@@ -2,7 +2,7 @@
 
 #include "Utilities.h"
 
-#ifdef _WIN32
+#if defined(_WIN32)
 namespace gd::Steam
 {
 	std::wstring getSteamInstallPath(void)
@@ -78,6 +78,6 @@ namespace gd::Steam
 		return libraryFolders;
 	}
 }
-#else /* _WIN32 */
-	#error Only Windows is supported (for now)
+#else
+#error Tried to include Steam_Win32.h on a non-windows platform
 #endif
