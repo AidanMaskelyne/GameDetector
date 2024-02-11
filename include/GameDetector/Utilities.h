@@ -25,7 +25,7 @@ inline void right_trim_string(std::string& s)
 
 #ifdef _WIN32
 #include <Windows.h>
-std::wstring RegGetString(HKEY hKey, const std::wstring& subKey, const std::wstring& value)
+std::wstring RegGetString(HKEY hKey, const std::wstring& subKey, const std::wstring& value) // TODO: Better error handling
 {
 	DWORD dataSize{};
 	LONG retCode = RegGetValue(
@@ -40,6 +40,7 @@ std::wstring RegGetString(HKEY hKey, const std::wstring& subKey, const std::wstr
 
 	if (retCode != ERROR_SUCCESS)
 	{
+		std::cout << retCode << std::endl;
 		throw std::runtime_error("Failed to get size of key value");
 	}
 

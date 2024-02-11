@@ -2,6 +2,9 @@
 
 #include "Utilities.h"
 
+// __TODOS__
+//     - Error handling for if Steam isn't actually installed (registry req.)
+
 #if defined(_WIN32)
 namespace gd::Steam
 {
