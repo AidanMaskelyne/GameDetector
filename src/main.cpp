@@ -4,9 +4,6 @@ int main(int argc, char* argv[])
 {
 	#if defined(_WIN32)
 	std::cout << "Platform _WIN32" << std::endl;
-	#elif defined(__unix__)
-	std::cout << "Platform __unix__" << std::endl;
-	#endif
 
 	std::wstring steamInstallPath = gd::Steam::getSteamInstallPath();
 
@@ -21,6 +18,10 @@ int main(int argc, char* argv[])
 
 	std::cout << std::endl << "Hit [ENTER] to exit the program...";
 	std::cin.get();
+	#elif defined(__unix__)
+	std::cout << "Platform __unix__" << std::endl;
+	#endif
+
 
 	return 0;
 }

@@ -6,3 +6,7 @@ target/
 *.sln
 *.vcxproj
 *.vcxproj.*
+
+# Unix files
+Makefile
+*.make
