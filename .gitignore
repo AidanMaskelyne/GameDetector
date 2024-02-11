@@ -1,0 +1,8 @@
+# Build output
+target/
+
+# Windows files
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.*
